@@ -1,1 +1,100 @@
 /* This is where I will define a pattern library for the site, with both sky and abyss themes. */
+
+@import "./Zenith.css"; /* Light mode */
+@import "./Abyss.css"; /* Dark mode */
+
+
+/* hack to properly apply theme background to full viewport height */
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* define abyss/zenith toggle here because it's used by both themes */
+
+/* selector operators used:
+   + -> chooses next sibling
+   ~ -> chooses any sibling
+*/
+
+/* defaults */
+.toggle {
+  float: right;
+  position: relative;
+  width: 60px;
+  height: 34px;
+  input {
+    display: none;
+  }
+  .slider-bg {
+    transition: 0.4s;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+  }
+  .slider-knob {
+    transition: 0.4s;
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
+  }
+}
+
+/* When in abyss mode, showing zenith toggle */
+.toggle {
+  input + .slider-bg {
+    background: linear-gradient(359deg, rgba(0, 192, 255, 1) 0%, rgba(0, 224, 255, 1) 50%, rgba(255, 255, 224, 1) 100%);
+  }
+  input ~ .slider-knob {
+    background-color: rgba(225, 225, 200, 0.5);
+    border: 3px solid #FFA;
+    height: 20px;
+    width: 20px;
+    box-shadow: rgba(225, 225, 200, 0.8) 1px -1px 15px 7px;
+  }
+}
+
+
+
+/* When in zenith mode, showing abyss toggle */
+.toggle {
+  input:checked + .slider-bg {
+    background: linear-gradient(353deg, rgba(24, 0, 38, 1) 10%, rgba(13, 1, 64, 1) 40%, rgba(0, 72, 87, 1) 100%);
+  }
+  input:checked ~ .slider-knob {
+    transform: translateX(26px);
+    border: none;
+    height: 26px;
+    width: 26px;
+    box-shadow: rgba(24, 0, 38, 0.5) 0px 0px 5px 2px inset;
+    background-color: #808;
+  }
+  input:checked ~ .slider-knob::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 10px;
+    left: 10px;
+    top: 5px;
+    background-color: #CB2;
+    border-radius: 50%;
+  }
+  input:checked ~ .slider-knob::after {
+    position: absolute;
+    content: "";
+    height: 7px;
+    width: 6px;
+    left: 12px;
+    top: 12px;
+    background-color: rgba(20, 30, 100, 0.8);
+    border-radius: 50%;
+    box-shadow: rgba(255, 255, 224, 0.8) 1px -2px 2px 1px
+  }
+}

@@ -1,0 +1,11 @@
+/* Dark mode */
+
+.abyss {
+  background: #180026;
+  background: linear-gradient(359deg, rgba(24, 0, 38, 1) 10%, rgba(13, 1, 64, 1) 75%, rgba(0, 72, 87, 1) 100%);
+
+  color: #F7A;
+  a {
+    color: #F9C;
+  }
+}

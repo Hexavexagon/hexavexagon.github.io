@@ -1,0 +1,11 @@
+/* Light mode */
+
+.zenith {
+  background: #00C0FF;
+  background: linear-gradient(359deg, rgba(0, 192, 255, 1) 0%, rgba(0, 224, 255, 1) 50%, rgba(255, 255, 224, 1) 100%);
+
+  color: #114;
+  a {
+    color: #C94;
+  }
+}
