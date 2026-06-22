@@ -1,6 +1,8 @@
 /* Dark mode */
 
 .abyss {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background: #180026;
   background: linear-gradient(359deg, rgba(24, 0, 38, 1) 10%, rgba(13, 1, 64, 1) 75%, rgba(0, 72, 87, 1) 100%);
 
