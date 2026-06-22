@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" class="abyss">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vex's Project Archive</title>
+    <link rel="stylesheet" href="../../Stylesheets/Global.css">
+    <script src="dr.js"></script>
+  </head>
+  <body>
+    <main>
+      <p>Basic dice roller. Idk what my plan is for this. Maybe make some cool dice pool tools, and let you save pools, etc.</p>
+      <p>Roll <input id="dr-number" type="number" min="1" />d<input id="dr-dicesize" type="number" min="2" />, and drop <input id="dr-drop" type="number" min="0" /><input id="dr-highorlow" type="checkbox" /> high.</p>
+      <button onClick="roll()">ROLL!</button>
+      <p>The result is:</p>
+      <p id="dr-result"></p>
+    </main>
+    <script src="../../theme-changer.js"></script>
+  </body>
+</html>
