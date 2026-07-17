@@ -6,12 +6,13 @@ def convert():
   document['nnn-result'] <= result
 
 def nullify(input):
+  intput = int(input)
   breakMe = document['breakMe'].value == 'on'
-  if int(input) > 21 and not breakMe:
+  if intput > 21 and not breakMe:
     return 'Specified number too high'
   else:
     resultMid = []
-    for i in range(input):
+    for i in range(intput):
       resultMid.append(', '.join(resultMid))
     return f'|{resultMid}|'
 
