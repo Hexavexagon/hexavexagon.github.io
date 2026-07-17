@@ -6,7 +6,7 @@ def convert():
   document['nnn-result'] <= result
 
 def nullify(input):
-  intput = int(input)
+  intput = int(input) # This has to "or null" or something like that. It errors when the input is empty because python can't convert '' to int.
   breakMe = document['breakMe'].value == 'on'
   if intput > 21 and not breakMe:
     return 'Specified number too high'
