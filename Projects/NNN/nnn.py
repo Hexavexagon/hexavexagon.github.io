@@ -1,0 +1,16 @@
+from browser import document
+
+def convert():
+  input = document['nnn-input'].value
+  result = nullify(input)
+  document['nnn-result'] <= result
+
+def nullify():
+  breakMe = document['breakMe'].value == 'on'
+  if input > 21 and not breakMe:
+    return 'Specified number too high'
+  else:
+    resultMid = []
+    for i in range(input):
+      resultMid.append(', '.join(resultMid))
+    return f'|{resultMid}|'
