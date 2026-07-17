@@ -7,7 +7,7 @@ def convert():
 
 def nullify(input):
   breakMe = document['breakMe'].value == 'on'
-  if input > 21 and not breakMe:
+  if int(input) > 21 and not breakMe:
     return 'Specified number too high'
   else:
     resultMid = []
