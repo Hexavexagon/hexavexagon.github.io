@@ -14,3 +14,9 @@ def nullify():
     for i in range(input):
       resultMid.append(', '.join(resultMid))
     return f'|{resultMid}|'
+
+def bindInit():
+  document['nnn-input'].bind('onKeyUp', convert())
+  print('convert() bound')
+
+bindInit()
